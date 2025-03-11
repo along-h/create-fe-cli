@@ -11,6 +11,6 @@ export default async () => {
     await installFrame(frameType, name);
     log.timeEnd("执行耗时");
   } catch (error) {
-    process.exit();
+    exit();
   }
 };
