@@ -1,6 +1,6 @@
 {
   "name": "create-fe-cli",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A CLI tool for creating frontend projects",
   "main": "index.js",
   "bin": {
@@ -11,6 +11,13 @@
     "build": "pnpm run copy && tsc",
     "copy": "copyfiles -a -u 1 \"src/config/**\" bin",
     "publish": "pnpm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/along-h/create-fe-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/along-h/create-fe-cli/issues"
   },
   "dependencies": {
     "chalk": "4",
