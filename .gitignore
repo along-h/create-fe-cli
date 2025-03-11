@@ -1,0 +1,14 @@
+*~
+*.swp
+*.log
+
+
+dist/
+build/
+bin/
+es/
+
+node_modules/
+my-app/
+
+.history/*

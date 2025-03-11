@@ -1,0 +1,35 @@
+{
+  "name": "create-fe-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install ",
+    "init": "pnpm install --no-frozen-lockfile",
+    "clean": "lerna clean && rm -rf node_modules",
+    "lint:prettier": "prettier --write .",
+    "publish": "lerna publish"
+  },
+  "keywords": [
+    "create fe cli",
+    "create vue",
+    "create react"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "lerna": "^8.1.9"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

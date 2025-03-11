@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES5", // 编译成ES5
+    "module": "CommonJS", // 编译成CommonJS模块
+    "sourceMap": false, // 不生成sourceMap
+    "declaration": false, // 不生成声明文件
+    "outDir": "./bin", // 编译输出目录
+    "moduleResolution": "node", // 告诉编译器如何处理模块，不加默认node
+    "esModuleInterop": true, // 允许使用import * as xxx from 'xxx'
+    "resolveJsonModule": true, // 允许导入json文件
+    "removeComments": false, // 移除注释
+    "strict": true, // 开启严格模式
+    "lib": ["ES5", "DOM"], // 编译时需要的库文件
+    "types": ["node"], // 声明文件
+  },
+  "include": ["src"],
+  "exclude": ["src/config"]
+}

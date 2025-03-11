@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "lint:style": "stylelint --fix"
+    },
+    "devDependencies": {
+        "stylelint": "16.0.2",
+        "stylelint-config-html": "1.1.0",
+        "stylelint-config-standard": "35.0.0"
+    }
+}

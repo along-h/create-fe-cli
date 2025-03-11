@@ -1,0 +1,40 @@
+{
+  "name": "create-fe-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool for creating frontend projects",
+  "main": "index.js",
+  "bin": {
+    "init": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pnpm run copy && tsc",
+    "copy": "copyfiles -a -u 1 \"src/config/**\" bin",
+    "publish": "pnpm publish"
+  },
+  "dependencies": {
+    "chalk": "4",
+    "command-exists": "^1.2.9",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^12.1.0",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@types/command-exists": "^1.2.3",
+    "@types/commander": "^2.12.5",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.10.1",
+    "husky": "^9.1.7",
+    "copyfiles": "^2.4.1"
+  },
+  "keywords": ["create-fe-cli", "create-fe"],
+  "author": "alongH",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

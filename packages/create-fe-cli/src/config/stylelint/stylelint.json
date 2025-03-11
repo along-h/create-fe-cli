@@ -1,0 +1,28 @@
+{
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-html"
+    ],
+    "rules": {
+        "declaration-block-trailing-semicolon": [
+            "always",
+            {
+                "severity": "error"
+            }
+        ],
+        "length-zero-no-unit": [
+            true,
+            {
+                "ignore": [
+                    "custom-properties"
+                ]
+            }
+        ]
+    },
+    "ignoreFiles": [
+        "** /*.js",
+        "**/*.jsx",
+        "** /*.ts",
+        "**/*.tsx"
+    ]
+}

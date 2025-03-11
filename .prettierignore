@@ -1,0 +1,7 @@
+template
+node_modules/
+dist/
+build/
+*.log
+*.md
+*.yaml
