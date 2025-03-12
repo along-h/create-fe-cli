@@ -57,8 +57,8 @@ export const REACT_INSTALL_TYPE: Array<{ name: string; value: string }> = [
 /** 模板地址 */
 
 export const TEMPLATE_URL = {
-  react: path.join(__dirname, "../../../../template/react18-ts"),
-  vue: path.join(__dirname, "../../../../template/vue3-ts")
+  react: path.join(__dirname, "../../template/react18-ts"),
+  vue: path.join(__dirname, "../../template/vue3-ts")
 };
 /**
  * 框架脚手架
