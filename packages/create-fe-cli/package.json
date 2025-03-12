@@ -1,10 +1,10 @@
 {
   "name": "create-fe-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A CLI tool for creating frontend projects",
   "main": "index.js",
   "bin": {
-    "init": "./bin/index.js"
+    "create-fe-cli": "./bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
