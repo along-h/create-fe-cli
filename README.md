@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-npm install -g create-fe-app
+npm install -g create-fe-cli
 ```
 
 ## 使用

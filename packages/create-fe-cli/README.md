@@ -28,7 +28,7 @@
 ## 创建项目
 
 ```bash
-create-fe-app --init <project-name>
+create-fe-app init
 ```
 
 后续根据提示内容选择即可。
