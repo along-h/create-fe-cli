@@ -14,5 +14,5 @@
     "types": ["node"], // 声明文件
   },
   "include": ["src"],
-  "exclude": ["src/config"]
+  "exclude": ["src/config", "src/template"]
 }

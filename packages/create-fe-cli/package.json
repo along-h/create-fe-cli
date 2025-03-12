@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pnpm run copy && && pnpm run copy:template && tsc",
+    "build": "pnpm run copy && pnpm run copy:template && tsc",
     "copy": "copyfiles -a -u 1 \"src/config/**\" bin",
     "copy:template": "copyfiles -a -u 1 \"src/template/**\" bin"
   },
