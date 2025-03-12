@@ -49,7 +49,7 @@ export default async (frameType: TFrameType, projectName: string) => {
         process.chdir(projectName);
         // 根据选择的规范安装相应的依赖
         await generateLint(frameType, checkList, "template");
-        loading.succeed(`创建react项目成功`);
+        loading.succeed(`创建 ${frameType} 项目成功`);
         return;
       }
     }
@@ -83,7 +83,7 @@ export default async (frameType: TFrameType, projectName: string) => {
     // 进入项目文件夹
     process.chdir(projectName);
     await generateLint(frameType, checkList, "cli");
-    loading.succeed(`创建react项目成功`);
+    loading.succeed(`创建 ${frameType} 项目成功`);
   } catch (error) {
     loading.fail(`创建 ${frameType} 失败，错误信息如下：\n ${error}`);
     exit(1);

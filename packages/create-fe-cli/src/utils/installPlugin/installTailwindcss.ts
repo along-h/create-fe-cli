@@ -3,7 +3,16 @@ import { copyFilesSync } from "../copyeFiles";
 import { wiritePkgByPkg } from "../writeFile";
 import ora from "ora";
 import log from "../log";
-import { readFile, readFileSync, writeFileSync } from "fs-extra";
+import { readFileSync, writeFileSync, existsSync } from "fs-extra";
+
+/** 判断vue文件类型，js/ts */
+const getVueFile: () => "/src/main.ts" | "/src/main.js" = () => {
+  if (existsSync(process.cwd() + "/src/main.ts")) {
+    return "/src/main.ts";
+  } else {
+    return "/src/main.js";
+  }
+};
 
 export default async (frameType: "react" | "vue", installType: "template" | "cli") => {
   const loading = ora("开始安装tailwindcss");
@@ -25,11 +34,16 @@ export default async (frameType: "react" | "vue", installType: "template" | "cli
       const newContent = content + oldContent;
       writeFileSync(process.cwd() + "/src/index.tsx", newContent, "utf8");
     } else {
-      const content = "import './assets/tailwindBase.css';";
+      const installMap = {
+        react: "/src/main.tsx",
+        vue: getVueFile
+      };
+      const filePath = process.cwd() + installMap[frameType];
+      const content = "import './assets/tailwindBase.css';\n";
       copyFilesSync(cssPath, process.cwd() + "/src/assets/tailwindBase.css");
-      const oldContent = await readFileSync(process.cwd() + "/src/main.ts", "utf8");
+      const oldContent = await readFileSync(filePath, "utf8");
       const newContent = content + oldContent;
-      writeFileSync(process.cwd() + "/src/main.ts", newContent, "utf8");
+      writeFileSync(filePath, newContent, "utf8");
     }
     loading.succeed("安装tailwindcss成功");
   } catch (error: any) {

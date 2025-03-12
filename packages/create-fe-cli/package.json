@@ -1,6 +1,6 @@
 {
   "name": "create-fe-cli",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A CLI tool for creating frontend projects",
   "main": "index.js",
   "bin": {
