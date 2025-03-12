@@ -29,7 +29,7 @@ export default async () => {
     `#!/usr/bin/env sh
     . "$(dirname -- "$0")/_/husky.sh"
 
-    npx commitlint --edit ${1}`
+    npx commitlint --edit \$\{1\}`
   );
   loading.succeed("husky 配置成功");
 };
