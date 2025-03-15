@@ -1,4 +1,4 @@
-# create-fe-app
+# create-fe-cli
 
 根据配置项一键创建前端项目，包括 vue，react。
 
@@ -11,5 +11,5 @@ npm install -g create-fe-cli
 ## 使用
 
 ```bash
-create-fe-app init
+create-fe-cli init
 ```

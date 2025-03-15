@@ -1,4 +1,4 @@
-# create-fe-app
+# create-fe-cli
 
 ## 简介
 
@@ -28,7 +28,7 @@
 ## 创建项目
 
 ```bash
-create-fe-app init
+create-fe-cli init
 ```
 
 后续根据提示内容选择即可。
